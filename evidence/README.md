@@ -28,10 +28,27 @@ The host and a second wallet committed separate vectors, revealed matching proba
 
 [Structured evidence and readbacks](studionet.json) · [Unedited SDK receipt journal](studionet-v2-raw.json.gz)
 
+## Hosted browser replay
+
+The public instrument signed all six writes through a temporary Studionet wallet. Each write showed finalized success and a matching contract readback. Refreshing the page allowed the settled round to load from the URL without a wallet.
+
+[Open the 12 May 2024 replay](https://halihalibt.github.io/fieldindex-genlayer/?round=0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3%2Fmay-recovery#instrument) · [Structured browser evidence](browser-replay.json)
+
+The eight definitive bins were `6.333, 7.000, 3.667, 4.333, 2.000, 3.000, 4.000, 6.333`. Three windows met the Kp threshold. The displayed mean Brier loss was `0.2203`. The browser audit matched all eight per-window losses.
+
+| Method | Transaction | Finalized result |
+| --- | --- | --- |
+| open_round | [0xf7992712a4…](https://explorer-studio.genlayer.com/tx/0xf7992712a454654ea081b2c4139884e1dc60723a1b012f4e70e77d6b286a0045) | FINALIZED / SUCCESS |
+| seal | [0x8777a1d383…](https://explorer-studio.genlayer.com/tx/0x8777a1d3832a7400c14a652ef54b3425daee8a3cda8ea650a3f0b01ec630121d) | FINALIZED / SUCCESS |
+| open_reveal | [0x1e8402e5c2…](https://explorer-studio.genlayer.com/tx/0x1e8402e5c227074c06f2220a988cedb3da559dd2955f8747c151807d032010af) | FINALIZED / SUCCESS |
+| reveal | [0xe8f4501f28…](https://explorer-studio.genlayer.com/tx/0xe8f4501f2845f130e9287530f72fa7593a87f3204369d8f3f612dbbfaf278bda) | FINALIZED / SUCCESS |
+| close_reveal | [0xe72c8b4a1a…](https://explorer-studio.genlayer.com/tx/0xe72c8b4a1ad8a3fb9a9f051eff31a7db93f22b32c1de3fb661528ce4cecd4bab) | FINALIZED / SUCCESS |
+| settle | [0x9af81db3f5…](https://explorer-studio.genlayer.com/tx/0x9af81db3f5af77c44a6531f6b4279cd1a4e5a67d468c1481a1e2ac42d5b03163) | FINALIZED / SUCCESS |
+
 ## Initial deployment incident
 
 The [original settlement](https://explorer-studio.genlayer.com/tx/0x4a5a314317ebffb9ed430b8f3c79a687db320a956eeb43ecdce4bdf102c5fc68) finalized with execution ERROR. The pinned GenVM response exposes `status`. The initial code tried to access `status_code` and stopped before recording any scores. The current deployment uses `status` and validates nonempty bounded response bytes. The [original transaction journal](studionet-v1-failure.json.gz) preserves the failure and all earlier results from that deployment.
 
 ## Reproduce the checks
 
-Run `npm run verify` to read receipts, compare deployed source bytes, fetch the finalized round and independently recalculate scores. The evidence records an archived replay, so it exercises live validators without waiting for a future GFZ publication. No future-day settlement or real-money action is represented here.
+Run `npm run verify` to read receipts, compare deployed source bytes, fetch the finalized round decode public reveal calldata, recompute the corresponding commitments, and independently recalculate scores. The evidence records an archived replay, so it exercises live validators without waiting for a future GFZ publication. No future-day settlement or real-money action is represented here.

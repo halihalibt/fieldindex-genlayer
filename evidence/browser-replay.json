@@ -1,0 +1,127 @@
+{
+  "chain": 61999,
+  "address": "0xD8f00ddd2aE9ef08AE890938018B73DFAF950fE5",
+  "round": "0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3/may-recovery",
+  "url": "https://halihalibt.github.io/fieldindex-genlayer/?round=0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3%2Fmay-recovery#instrument",
+  "signer": "temporary Studionet wallet",
+  "steps": [
+    {
+      "method": "open_round",
+      "hash": "0xf7992712a454654ea081b2c4139884e1dc60723a1b012f4e70e77d6b286a0045",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "browser_readback": "MATCH"
+    },
+    {
+      "method": "seal",
+      "hash": "0x8777a1d3832a7400c14a652ef54b3425daee8a3cda8ea650a3f0b01ec630121d",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "browser_readback": "MATCH"
+    },
+    {
+      "method": "open_reveal",
+      "hash": "0x1e8402e5c227074c06f2220a988cedb3da559dd2955f8747c151807d032010af",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "browser_readback": "MATCH"
+    },
+    {
+      "method": "reveal",
+      "hash": "0xe8f4501f2845f130e9287530f72fa7593a87f3204369d8f3f612dbbfaf278bda",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "browser_readback": "MATCH"
+    },
+    {
+      "method": "close_reveal",
+      "hash": "0xe72c8b4a1ad8a3fb9a9f051eff31a7db93f22b32c1de3fb661528ce4cecd4bab",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "browser_readback": "MATCH"
+    },
+    {
+      "method": "settle",
+      "hash": "0x9af81db3f5af77c44a6531f6b4279cd1a4e5a67d468c1481a1e2ac42d5b03163",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "browser_readback": "MATCH"
+    }
+  ],
+  "refresh_readback": "MATCH",
+  "score_audit": {
+    "match": true,
+    "events": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "checked": 1,
+    "reason": null
+  },
+  "finalized_readback": {
+    "bins": [
+      6333,
+      7000,
+      3667,
+      4333,
+      2000,
+      3000,
+      4000,
+      6333
+    ],
+    "day": "2024-05-12",
+    "entries": {
+      "0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3": {
+        "digest": "523e0dbd3251776dcbcf2108f3f66268b1b4e13d0c616f7e505067f19c02f918",
+        "probabilities": [
+          60,
+          50,
+          50,
+          40,
+          61,
+          50,
+          40,
+          60
+        ]
+      }
+    },
+    "host": "0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3",
+    "key": "0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3/may-recovery",
+    "mode": "REPLAY",
+    "opened_on": "2026-11-22",
+    "ranking": [
+      {
+        "actor": "0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3",
+        "loss_sum": 17621,
+        "losses": [
+          1600,
+          2500,
+          2500,
+          1600,
+          3721,
+          2500,
+          1600,
+          1600
+        ],
+        "rank": 1
+      }
+    ],
+    "replay_phase": "AWAITING_DATA",
+    "reveal_until": "2024-05-14",
+    "revision": 6,
+    "settler": "0x4123ecc84a4a5b3a025f7ef7961de6f84994f6e3",
+    "source": "https://kp.gfz.de/app/json/?start=2024-05-12T00:00:00Z&end=2024-05-12T23:59:59Z&index=Kp&status=def"
+  }
+}
