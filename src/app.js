@@ -23,6 +23,7 @@ let selectedActor = null;
 let auditKey = null;
 let roundError = "";
 let roundLoading = false;
+let renderedRoundPhase = null;
 let list = [];
 let listError = "";
 let signer = null;
@@ -38,7 +39,7 @@ let txError = false;
 let remoteRequest = 0;
 
 const localKey = () => `field-index:pending:${config.address?.toLowerCase()}`;
-const secretKey = (key, actor) => `field-index:seal:${config.address?.toLowerCase()}:${key}:${actor}`;
+const secretKey = (key, actor, digest) => `field-index:seal:${config.address?.toLowerCase()}:${key}:${actor}${digest ? ":" + digest : ""}`;
 const short = (value) => value.slice(0, 6) + "…" + value.slice(-4);
 const slug = (key) => key.split("/")[1];
 const pad = (value) => String(value).padStart(2, "0");
@@ -103,8 +104,11 @@ function actorEntry() {
 }
 
 function recovery() {
-  if (!round || !signer) return null;
-  return readStorage(secretKey(round.key, signer.address));
+  const digest = actorEntry()?.digest;
+  if (!digest) return null;
+  const saved = readStorage(secretKey(round.key, signer.address, digest))
+    ?? readStorage(secretKey(round.key, signer.address));
+  return saved?.digest === digest ? saved : null;
 }
 
 function drawTape() {
@@ -183,6 +187,7 @@ probability.addEventListener("input", () => {
 });
 
 function renderInstrument() {
+  renderedRoundPhase = mode === "chain" && round ? phaseOf(round) : null;
   $("#practice-mode").setAttribute("aria-pressed", mode === "practice");
   $("#chain-mode").setAttribute("aria-pressed", mode === "chain");
   const action = $("#tape-actions");
@@ -268,6 +273,7 @@ async function loadRound(key, { silent = false } = {}) {
     return null;
   }
   const token = ++remoteRequest;
+  let repaint = !silent;
   if (!silent) {
     if (roundKey !== key) {
       round = null;
@@ -284,6 +290,11 @@ async function loadRound(key, { silent = false } = {}) {
     const record = await read(config.address, "get_round", [key]);
     if (!record || record.key !== key) throw Error("No finalized round found for this key.");
     if (token !== remoteRequest) return record;
+    if (silent && round?.key === key) {
+      if (record.revision < round.revision) return record;
+      repaint = record.revision !== round.revision || phaseOf(record) !== renderedRoundPhase;
+      if (!repaint) return record;
+    }
     round = record;
     roundKey = key;
     if (!record.entries[selectedActor]?.probabilities) selectedActor = record.ranking[0]?.actor ?? null;
@@ -295,7 +306,7 @@ async function loadRound(key, { silent = false } = {}) {
   } finally {
     if (token === remoteRequest) {
       roundLoading = false;
-      renderAll();
+      if (repaint) renderAll();
     }
   }
 }
@@ -579,7 +590,7 @@ async function seal() {
   if (round?.key !== key || signer?.address !== actor || pending || submitting) return;
   const saved = { protocol: PROTOCOL, contract: config.address, key, actor, values, salt, digest };
   try {
-    localStorage.setItem(secretKey(key, actor), JSON.stringify(saved));
+    localStorage.setItem(secretKey(key, actor, saved.digest), JSON.stringify(saved));
   } catch {
     report("The browser could not store your reveal key. Enable site storage before sealing.", true);
     return;
@@ -613,7 +624,7 @@ $("#recovery-file").addEventListener("change", async (event) => {
       || !saved.values.every((p) => Number.isInteger(p) && p >= 0 && p <= 100)) throw Error("Invalid key.");
     saved.digest = await commitment(config.address, key, actor, saved.values, saved.salt);
     if (saved.digest !== entry?.digest) throw Error("Commitment mismatch.");
-    localStorage.setItem(secretKey(key, actor), JSON.stringify(saved));
+    localStorage.setItem(secretKey(key, actor, saved.digest), JSON.stringify(saved));
     report("Reveal key restored.");
     renderInstrument();
   } catch {
