@@ -4,7 +4,7 @@
 
 Field Index is a geomagnetic forecast lab for classrooms, forecast clubs, and independent model builders. Participants seal eight probabilities for Kp reaching 5 during each three-hour UTC interval. The lab scores matching reveals against the definitive planetary Kp data published by GFZ Potsdam.
 
-Two groups can compare forecasts without giving either control of the observation feed or rankings. GenLayer validators fetch the same dated GFZ record independently and compare the full normalized vector through strict equivalence. They must agree on the bins before the Intelligent Contract writes the scores. The host cannot enter a Kp value, award points, or change an observation day.
+Independent forecasters can compare forecasts without controlling the observation feed or rankings. Each forecast and rank is associated with the participating wallet address. GenLayer validators fetch the same dated GFZ record independently and compare the full normalized vector through strict equivalence. They must agree on the bins before the Intelligent Contract writes the scores. The host cannot enter a Kp value, award points, or change an observation day.
 
 ## Open the instrument
 
