@@ -1,0 +1,465 @@
+{
+  "chain": 61999,
+  "source_sha256": "ee3129a2f591a5dd7c242d9dfb902f82346e4bac0add44c96f7b17328fc0d516",
+  "steps": [
+    {
+      "method": "deploy",
+      "hash": "0x0819a1ffcb889632b0603d9691d29de29195e1db254da531a14822d922eb45b6",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "address": "0xD8f00ddd2aE9ef08AE890938018B73DFAF950fE5"
+      }
+    },
+    {
+      "method": "open_round",
+      "hash": "0x819609eb9ef9b910ec6588eda0c92d238c91191f95249d4f251941a841c2312a",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": null,
+        "day": "2024-05-11",
+        "entries": {},
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [],
+        "replay_phase": "COMMIT",
+        "reveal_until": "2024-05-13",
+        "revision": 1,
+        "settler": null,
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    },
+    {
+      "method": "seal",
+      "hash": "0x09e549863e84de6ac2f574d082b95079b68c671207486858a0eb77682054f26a",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": null,
+        "day": "2024-05-11",
+        "entries": {
+          "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+            "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+            "probabilities": null
+          }
+        },
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [],
+        "replay_phase": "COMMIT",
+        "reveal_until": "2024-05-13",
+        "revision": 2,
+        "settler": null,
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    },
+    {
+      "method": "seal",
+      "hash": "0xfdb6cd72f9aed1abf8a8a94a2004e7d6c9d54c8b2cd7672c69c255f7e32e53b2",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": null,
+        "day": "2024-05-11",
+        "entries": {
+          "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53": {
+            "digest": "304bc54c3a5235bf21be8d3d280c3bba2b1d4e4b9a224c4ae827eb1c5dcb7ecb",
+            "probabilities": null
+          },
+          "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+            "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+            "probabilities": null
+          }
+        },
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [],
+        "replay_phase": "COMMIT",
+        "reveal_until": "2024-05-13",
+        "revision": 3,
+        "settler": null,
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    },
+    {
+      "method": "open_reveal",
+      "hash": "0x605699b49023604e2a5fbec888b1afba8802803529f273340d564f34ade40070",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": null,
+        "day": "2024-05-11",
+        "entries": {
+          "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53": {
+            "digest": "304bc54c3a5235bf21be8d3d280c3bba2b1d4e4b9a224c4ae827eb1c5dcb7ecb",
+            "probabilities": null
+          },
+          "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+            "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+            "probabilities": null
+          }
+        },
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [],
+        "replay_phase": "REVEAL",
+        "reveal_until": "2024-05-13",
+        "revision": 4,
+        "settler": null,
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    },
+    {
+      "method": "reveal",
+      "hash": "0x1655174c01b61437c1808a9375bfeedfc46420993fe77849f2bccc0034cf38db",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": null,
+        "day": "2024-05-11",
+        "entries": {
+          "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53": {
+            "digest": "304bc54c3a5235bf21be8d3d280c3bba2b1d4e4b9a224c4ae827eb1c5dcb7ecb",
+            "probabilities": null
+          },
+          "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+            "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+            "probabilities": [
+              74,
+              85,
+              94,
+              90,
+              76,
+              68,
+              58,
+              45
+            ]
+          }
+        },
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [],
+        "replay_phase": "REVEAL",
+        "reveal_until": "2024-05-13",
+        "revision": 5,
+        "settler": null,
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    },
+    {
+      "method": "reveal",
+      "hash": "0xe1b56e242d85287bead1432b0fe558cee43c60b7fcf458fe46d1deaeef3ba2b3",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": null,
+        "day": "2024-05-11",
+        "entries": {
+          "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53": {
+            "digest": "304bc54c3a5235bf21be8d3d280c3bba2b1d4e4b9a224c4ae827eb1c5dcb7ecb",
+            "probabilities": [
+              48,
+              64,
+              73,
+              80,
+              86,
+              78,
+              61,
+              33
+            ]
+          },
+          "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+            "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+            "probabilities": [
+              74,
+              85,
+              94,
+              90,
+              76,
+              68,
+              58,
+              45
+            ]
+          }
+        },
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [],
+        "replay_phase": "REVEAL",
+        "reveal_until": "2024-05-13",
+        "revision": 6,
+        "settler": null,
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    },
+    {
+      "method": "close_reveal",
+      "hash": "0xf813e0ec4a5ac96ac7e7f1d359feaee2af77030720e10416a176e6f5b4e77ea6",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": null,
+        "day": "2024-05-11",
+        "entries": {
+          "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53": {
+            "digest": "304bc54c3a5235bf21be8d3d280c3bba2b1d4e4b9a224c4ae827eb1c5dcb7ecb",
+            "probabilities": [
+              48,
+              64,
+              73,
+              80,
+              86,
+              78,
+              61,
+              33
+            ]
+          },
+          "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+            "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+            "probabilities": [
+              74,
+              85,
+              94,
+              90,
+              76,
+              68,
+              58,
+              45
+            ]
+          }
+        },
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [],
+        "replay_phase": "AWAITING_DATA",
+        "reveal_until": "2024-05-13",
+        "revision": 7,
+        "settler": null,
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    },
+    {
+      "method": "settle",
+      "hash": "0x2c4109fcb519f245430cb1f968ca3260586b3193654acea9732d595b78e87295",
+      "expectedExecution": "SUCCESS",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "detail": null,
+      "success": true,
+      "readback": {
+        "bins": [
+          9000,
+          8333,
+          8333,
+          9000,
+          8667,
+          8333,
+          7667,
+          7667
+        ],
+        "day": "2024-05-11",
+        "entries": {
+          "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53": {
+            "digest": "304bc54c3a5235bf21be8d3d280c3bba2b1d4e4b9a224c4ae827eb1c5dcb7ecb",
+            "probabilities": [
+              48,
+              64,
+              73,
+              80,
+              86,
+              78,
+              61,
+              33
+            ]
+          },
+          "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+            "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+            "probabilities": [
+              74,
+              85,
+              94,
+              90,
+              76,
+              68,
+              58,
+              45
+            ]
+          }
+        },
+        "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+        "mode": "REPLAY",
+        "opened_on": "2026-11-22",
+        "ranking": [
+          {
+            "actor": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+            "loss_sum": 7426,
+            "losses": [
+              676,
+              225,
+              36,
+              100,
+              576,
+              1024,
+              1764,
+              3025
+            ],
+            "rank": 1
+          },
+          {
+            "actor": "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53",
+            "loss_sum": 11819,
+            "losses": [
+              2704,
+              1296,
+              729,
+              400,
+              196,
+              484,
+              1521,
+              4489
+            ],
+            "rank": 2
+          }
+        ],
+        "replay_phase": "AWAITING_DATA",
+        "reveal_until": "2024-05-13",
+        "revision": 8,
+        "settler": "0x258da234454a75902d3481ea8802d176612fef37",
+        "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+      }
+    }
+  ],
+  "address": "0xD8f00ddd2aE9ef08AE890938018B73DFAF950fE5",
+  "round": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+  "finalized_readback": {
+    "bins": [
+      9000,
+      8333,
+      8333,
+      9000,
+      8667,
+      8333,
+      7667,
+      7667
+    ],
+    "day": "2024-05-11",
+    "entries": {
+      "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53": {
+        "digest": "304bc54c3a5235bf21be8d3d280c3bba2b1d4e4b9a224c4ae827eb1c5dcb7ecb",
+        "probabilities": [
+          48,
+          64,
+          73,
+          80,
+          86,
+          78,
+          61,
+          33
+        ]
+      },
+      "0x4ea69bc3152d000f8940e20c1a188e98865b03a9": {
+        "digest": "9bc65cb10b0c75f1e257fef653c1bf2a7c5b389ef139324343da261c0043d59d",
+        "probabilities": [
+          74,
+          85,
+          94,
+          90,
+          76,
+          68,
+          58,
+          45
+        ]
+      }
+    },
+    "host": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+    "key": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9/may-disturbance",
+    "mode": "REPLAY",
+    "opened_on": "2026-11-22",
+    "ranking": [
+      {
+        "actor": "0x4ea69bc3152d000f8940e20c1a188e98865b03a9",
+        "loss_sum": 7426,
+        "losses": [
+          676,
+          225,
+          36,
+          100,
+          576,
+          1024,
+          1764,
+          3025
+        ],
+        "rank": 1
+      },
+      {
+        "actor": "0x2cbb74a026caccc0eee4bd981d9c4cfc6f7eaa53",
+        "loss_sum": 11819,
+        "losses": [
+          2704,
+          1296,
+          729,
+          400,
+          196,
+          484,
+          1521,
+          4489
+        ],
+        "rank": 2
+      }
+    ],
+    "replay_phase": "AWAITING_DATA",
+    "reveal_until": "2024-05-13",
+    "revision": 8,
+    "settler": "0x258da234454a75902d3481ea8802d176612fef37",
+    "source": "https://kp.gfz.de/app/json/?start=2024-05-11T00:00:00Z&end=2024-05-11T23:59:59Z&index=Kp&status=def"
+  }
+}

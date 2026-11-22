@@ -1,0 +1,19 @@
+{
+  "name": "fieldindex-genlayer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build --base=./",
+    "test": "python3 -m unittest discover -s tests && node --test tests/*.test.mjs",
+    "live": "node scripts/live.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "genlayer-js": "1.1.8"
+  },
+  "devDependencies": {
+    "vite": "6.4.6"
+  }
+}
